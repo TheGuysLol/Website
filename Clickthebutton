@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Click Counter</title>
+  <style>
+    body {
+      background-color: #ff3333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    button {
+      background-color: #0080ff;
+      color: #fff;
+      font-size: 24px;
+      padding: 16px 32px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 32px;
+    }
+    #count {
+      color: #fff;
+      font-size: 48px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <button id="clickBtn">Click</button>
+  <div id="count">0</div>
+  <script>
+    var count = 0;
+    var btn = document.getElementById("clickBtn");
+    var countDisplay = document.getElementById("count");
+    btn.onclick = function() {
+      count++;
+      countDisplay.innerHTML = count;
+    };
+  </script>
+</body>
+</html>
